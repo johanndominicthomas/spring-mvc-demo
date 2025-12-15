@@ -25,8 +25,8 @@ public class TeacherBean {
 		return subject;
 	}
 
-	public void setSubject(String marks) {
-		this.subject = marks;
+	public void setSubject(String subject) {
+		this.subject = subject;
 	}
 
 }
