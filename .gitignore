@@ -1,0 +1,13 @@
+# Maven
+target/
+*.log
+
+# Eclipse / STS
+.classpath
+.project
+.settings/
+.springBeans
+
+# OS files
+.DS_Store
+Thumbs.db
