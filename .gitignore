@@ -1,6 +1,7 @@
 # Maven
 target/
 *.log
+.mvn/
 
 # Eclipse / STS
 .classpath
