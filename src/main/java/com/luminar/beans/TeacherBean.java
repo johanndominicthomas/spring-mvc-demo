@@ -21,11 +21,11 @@ public class TeacherBean {
 		this.name = name;
 	}
 
-	public String getMarks() {
+	public String getSubject() {
 		return subject;
 	}
 
-	public void setMarks(String marks) {
+	public void setSubject(String marks) {
 		this.subject = marks;
 	}
 
