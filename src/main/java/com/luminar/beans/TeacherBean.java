@@ -3,7 +3,7 @@ package com.luminar.beans;
 public class TeacherBean {
 	private int id;
 	private String name;
-	private String marks;
+	private String subject;
 
 	public int getId() {
 		return id;
@@ -22,11 +22,11 @@ public class TeacherBean {
 	}
 
 	public String getMarks() {
-		return marks;
+		return subject;
 	}
 
 	public void setMarks(String marks) {
-		this.marks = marks;
+		this.subject = marks;
 	}
 
 }
