@@ -3,6 +3,7 @@ package com.luminar.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -70,5 +71,27 @@ public class TeacherDaoImpl implements TeacherDao {
 	 * Here we use mapRow to match each row to a java object but we dont add it to the list.
 	 * jdbcTemplate does it internally
 	 */
+
+	@Override
+	public Optional<TeacherBean> fetchTeacherById(int id) {
+		String sql = "select * from teachers where id = ?";
+		
+		List<TeacherBean> list = template.query(sql, (rs,rowNum) -> {
+			TeacherBean t = new TeacherBean();
+			t.setId(rs.getInt("id"));
+			t.setName(rs.getString("name"));
+			t.setSubject(rs.getString("subject"));
+			return t;
+		},id);
+		
+		return list.stream().findFirst();
+		//findFirst returns an object of Type Optional<T>
+	}
+	
+	/*Here template.query is passed with the sql,rowmapper object and id.
+	 * The list is converted to a stream and the first value is taken.
+	 * It is of optional type so it can avoid nullpointer exception
+	 */
+	
 
 }
