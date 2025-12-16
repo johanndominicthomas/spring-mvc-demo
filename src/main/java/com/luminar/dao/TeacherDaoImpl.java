@@ -93,5 +93,16 @@ public class TeacherDaoImpl implements TeacherDao {
 	 * It is of optional type so it can avoid nullpointer exception
 	 */
 	
+	// return list.stream().findFirst();//Get the first element from the list, if it
+	// exists, otherwise return empty.
+	
+
+	/*
+	 * 1. get query result into a list ( List<TeacherBean> list =
+	 * template.query(.... 2. list.stream() -> Converts the list into a Stream to
+	 * apply steam () 3. findFirst() ->returns the first element in the stream .
+	 * return type is Optional<TeacherBean> 4. If list has data ->
+	 * Optional.of(teacher) If list is empty ->Optional.empty()
+	 */
 
 }
