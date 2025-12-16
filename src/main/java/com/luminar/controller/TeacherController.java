@@ -44,7 +44,7 @@ public class TeacherController {
 	public String viewteacher(Model m) {
 		List<TeacherBean> list = teacherService.getTeacherDetails();
 		m.addAttribute("list", list);
-		return "viewsteacher.jsp";
+		return "viewsteacher";
 	}
 	
 }
