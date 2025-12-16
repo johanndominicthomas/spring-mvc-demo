@@ -22,4 +22,6 @@ public class TeacherController {
 		m.addAttribute("teacher", new TeacherBean());
 		return "teacher";
 	}
+	
+	//Model object is injected by spring when call comes to /teacher
 }
