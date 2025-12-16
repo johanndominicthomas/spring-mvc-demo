@@ -75,6 +75,12 @@ public class TeacherController {
 	//optional is used to avoid manual null checks
 	
 	
+	/*Update existing teacher values*/
+	@PostMapping("/updateteacher")
+	public String updateTeacher(@ModelAttribute("teacher") TeacherBean teacher) {
+		teacherService.updateTeacher(teacher);
+		return "redirect:/viewsteacher";
+	}
 
 	
 }
