@@ -34,7 +34,7 @@ public class TeacherController {
 	@PostMapping("/save")
 	public String save(@ModelAttribute("teacher") TeacherBean teacher) {
 		teacherService.saveTeacher(teacher);
-		return "redirect:/viewstudent";
+		return "redirect:/viewsteacher";
 	}
 	
 	//redirect causes redirect to method mapped with viewstudent below
