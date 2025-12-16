@@ -71,6 +71,10 @@ public class TeacherController {
 	 * always a plain String, which is why it can be returned directly from
 	 * the controller method.
 	 */
+	
+	//optional is used to avoid manual null checks
+	
+	
 
 	
 }
