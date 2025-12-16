@@ -1,6 +1,7 @@
 package com.luminar.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -33,6 +34,11 @@ public class TeacherServiceImpl implements TeacherService {
 	@Override
 	public List<TeacherBean> getTeacherDetails() {
 		return teacherDao.fetchAllTeachers();
+	}
+
+	@Override
+	public Optional<TeacherBean> getTeacherById(int id) {
+		return teacherDao.fetchTeacherById(id);
 	}
 
 }
