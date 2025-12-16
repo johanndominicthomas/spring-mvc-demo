@@ -25,7 +25,7 @@ public class TeacherDaoImpl implements TeacherDao {
 	
 	@Override
 	public void insertTeacher(TeacherBean teacher) {
-		String sql = "INSERT INTO teachers (id,name,subject) values (?, ?)";
+		String sql = "INSERT INTO teachers (name,subject) values (?, ?)";
 		
 		template.update(sql,teacher.getName(),teacher.getSubject());
 	}
