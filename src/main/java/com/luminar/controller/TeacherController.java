@@ -82,5 +82,11 @@ public class TeacherController {
 		return "redirect:/viewsteacher";
 	}
 
+	/*delete teacher*/
+	@GetMapping("deleteteacher/{id}")
+	public String deleteTeacher(@PathVariable int id) {
+		teacherService.deleteTeacher(id);
+		return "redirect:/viewsteacher";
+	}
 	
 }
